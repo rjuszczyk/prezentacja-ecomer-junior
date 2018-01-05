@@ -6,6 +6,14 @@ import android.view.ViewPropertyAnimator;
 
 public class Page5 extends FooterActivity {
 
+    protected long getDelay() {
+        return 250;
+    }
+
+    protected long getDuration() {
+        return 700;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +44,13 @@ public class Page5 extends FooterActivity {
                     green_icon3
                     );
 
-            animateIn(500, inAnimator,
-                    title1,
-                    title2,
-                    title3,
-                    title4,
-                    title5,
+            title1.animate().alpha(1).setDuration(1000).start();
+            title2.animate().alpha(1).setDuration(1000).start();
+            title3.animate().alpha(1).setDuration(1000).start();
+            title4.animate().alpha(1).setDuration(1000).start();
+            title5.animate().alpha(1).setDuration(1000).start();
+
+            animateIn(1500, inAnimator,
                     green_icon1, green1,
                     green_icon2, green2,
                     green_icon3, green3
