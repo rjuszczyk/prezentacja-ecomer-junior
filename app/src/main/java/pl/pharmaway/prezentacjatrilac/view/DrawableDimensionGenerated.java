@@ -7,6 +7,8 @@ public class DrawableDimensionGenerated {
         switch(image) {
             case R.drawable.bg:
                 return new int[]{1920, 1200};
+                case R.drawable.form1:
+                return new int[]{1921, 818};
             case R.drawable.blue1:
                 return new int[]{596, 542};
             case R.drawable.blue2:

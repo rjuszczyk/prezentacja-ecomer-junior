@@ -71,7 +71,6 @@ public class Page5 extends FooterActivity {
 
     @Override
     protected Class<?> getNextActivity() {
-        return Page1.class;
-        //todo: niech przechodzi do wysylania
+        return FormActivity.class;
     }
 }

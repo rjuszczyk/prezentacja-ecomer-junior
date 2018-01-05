@@ -9,6 +9,15 @@ import pl.pharmaway.prezentacjatrilac.mvp.Cancelable;
 
 public class Page4 extends FooterActivity {
 
+    @Override
+    protected long getDelay() {
+        return 250;
+    }
+    @Override
+    protected long getDuration() {
+        return 750;
+    }
+
     private View red1;
     private View red2;
     private View red3;

@@ -5,6 +5,14 @@ import android.view.View;
 import android.view.ViewPropertyAnimator;
 
 public class Page3 extends FooterActivity {
+    @Override
+    protected long getDelay() {
+        return 250;
+    }
+    @Override
+    protected long getDuration() {
+        return 750;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
