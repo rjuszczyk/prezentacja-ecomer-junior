@@ -54,8 +54,8 @@ public class LoadingActivity extends AppCompatActivity implements LoadingView{
         loadingPresenter = new LoadingPresenter(
                 new LoadingModelImpl(database, prezentacjaApi, sharedPreferences),
                 this,
-                new SendFormImpl(),
-                new FormDataRepositoryImpl()
+                new SendFormImpl(prezentacjaApi),
+                new FormDataRepositoryImpl(this, database)
         );
         loadingPresenter.start();
     }
