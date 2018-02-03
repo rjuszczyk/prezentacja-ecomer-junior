@@ -44,11 +44,11 @@ public class Page5 extends FooterActivity {
                     green_icon3
                     );
 
-            title1.animate().alpha(1).setDuration(1000).start();
-            title2.animate().alpha(1).setDuration(1000).start();
-            title3.animate().alpha(1).setDuration(1000).start();
-            title4.animate().alpha(1).setDuration(1000).start();
-            title5.animate().alpha(1).setDuration(1000).start();
+            title1.animate().alpha(1).setStartDelay(500).setDuration(1000).start();
+            title2.animate().alpha(1).setStartDelay(500).setDuration(1000).start();
+            title3.animate().alpha(1).setStartDelay(500).setDuration(1000).start();
+            title4.animate().alpha(1).setStartDelay(500).setDuration(1000).start();
+            title5.animate().alpha(1).setStartDelay(500).setDuration(1000).start();
 
             animateIn(1500, inAnimator,
                     green_icon1, green1,

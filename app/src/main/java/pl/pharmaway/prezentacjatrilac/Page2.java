@@ -1,14 +1,19 @@
 package pl.pharmaway.prezentacjatrilac;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 public class Page2 extends FooterActivity {
 
+    private FirstChoice firstChoice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        firstChoice = new FirstChoice(getSharedPreferences("appPrefs", Context.MODE_PRIVATE));
 
         View skutecznosc = findViewById(R.id.skutecznosc);
         View optymalnaKolonizacja = findViewById(R.id.optymalna_kolonizacja);
@@ -17,6 +22,7 @@ public class Page2 extends FooterActivity {
         skutecznosc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                firstChoice.setFirstChoice("skład");
                 openSkutecznosc();
             }
         });
@@ -24,6 +30,7 @@ public class Page2 extends FooterActivity {
         optymalnaKolonizacja.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                firstChoice.setFirstChoice("działanie");
                 openOptymalnaKolonizacja();
             }
         });
@@ -31,9 +38,16 @@ public class Page2 extends FooterActivity {
         bezpieczenstwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                firstChoice.setFirstChoice("pacjent");
                 openBezpieczenstwo();
             }
         });
+    }
+
+    @Override
+    protected void onNextClicked() {
+        firstChoice.setFirstChoice("skład");
+        super.onNextClicked();
     }
 
     private void openSkutecznosc() {
