@@ -80,6 +80,6 @@ public class Page5 extends FooterActivity {
 
     @Override
     protected Class<?> getNextActivity() {
-        return FormActivity.class;
+        return Page6.class;
     }
 }
