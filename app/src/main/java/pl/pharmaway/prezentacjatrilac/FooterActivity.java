@@ -106,8 +106,9 @@ public abstract class FooterActivity extends AppCompatActivity {
     }
 
     protected Cancelable animateIn(long initialDelay, AnimationOperator animationOpeartor, View... paragraphs) {
-        long delay = getDelay();
-        long duration = getDuration();
+        initialDelay = 0;
+        long delay = 0;//getDelay();
+        long duration = 0;//getDuration();
 
         final List<ViewPropertyAnimator> animations = new ArrayList<>();
 
